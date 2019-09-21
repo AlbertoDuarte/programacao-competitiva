@@ -1,4 +1,4 @@
-## Algoritmo Z
+# Algoritmo Z
 
 
 Questão: https://codeforces.com/group/btcK4I5D5f/contest/247037/problem/H
@@ -7,7 +7,7 @@ A ideia da solução é simular Elizardo escrevendo os caracteres e, a cada cara
 
 Esta solução terá complexidade O(n²) pois, no pior caso, faremos um loop na string S e, em cada loop, aplicaremos o Algoritmo Z que é linear. O maior tamanho possível de S é 10³ logo nossa solução quadrática passará com tranquilidade.
 
-# Solução
+## Solução
 
 Faremos um loop na string S onde, dado o índice i, a string que corresponde aos caracteres já escritos é o prefixo de S com tamanho i, e a string dos caracteres não escritos é o sufixo de S a partir de i. Portanto, queremos a *maior* substring do prefixo de S que corresponde a um prefixo do sufixo de S
 
@@ -44,7 +44,7 @@ passos++;
 i += maior-1; // Se copiamos uma string de tamanho n, devemos pular n-1 endereços
 ```
 
-# Solução completa:
+## Solução completa:
 ```c++
 
 #includes e defines
