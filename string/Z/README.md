@@ -35,7 +35,7 @@ for(int i = (int)suf.size()+1; i < (int)Z.size(); i++) {
 }
 ```
 
-Depois de encontrada a substring que podemos dar "control c + control v", devemos incrementar o número de passos (que é o mesmo se for digitada uma única letra ou dado "control c + control v").
+Depois de encontrada a substring que podemos dar "control c + control v", devemos incrementar o número de passos (digitar um caractere ou dar "control c + control v" são ambos considerados 1 passo).
 
 Se a maior substring for <= 1 então será considerado que simplesmente escrevemos um caractere. Caso seja > 1, nós damos "control c + control v", o que significa que escrevemos mais de um caractere e, portanto, devemos avançar nosso loop para que não escrevamos o caractere no próximo índice duas vezes.
 
