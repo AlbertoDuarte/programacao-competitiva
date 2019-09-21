@@ -47,6 +47,9 @@ i += maior-1; // Se copiamos uma string de tamanho n, devemos pular n-1 endereç
 # Solução completa:
 ```c++
 
+#includes e defines
+...
+
 int Zcalc(string s) {
   ...
 }
