@@ -1,17 +1,25 @@
 # Algoritmo Z
 
+Questões solucionadas:
+
+1. [Substring do prefixo de S correspondente a um prefixo do sufixo de S](#controlcê-controlvê)
+2. [Maior prefixo de S igual ao sufixo de S que corresponda a uma substring no interior de S](#password)
+
+## Controlcê Controlvê
 
 Questão: https://codeforces.com/group/btcK4I5D5f/contest/247037/problem/H
 
+Complexidade: O(|S|²), 1 <= |S| <= 10^3
+
 A ideia da solução é simular Elizardo escrevendo os caracteres e, a cada caractere, verificar se há na string dos caracteres que ele já escreveu uma substring que corresponde a exatamente os próximos caracteres que terá que escrever.
 
-Esta solução terá complexidade O(n²) pois, no pior caso, faremos um loop na string S e, em cada loop, aplicaremos o Algoritmo Z que é linear. O maior tamanho possível de S é 10³ logo nossa solução quadrática passará com tranquilidade.
+Esta solução terá complexidade O(|S|²) pois, no pior caso, faremos um loop na string S e, em cada loop, aplicaremos o Algoritmo Z que é linear em |S|. O maior valor de |S| é 10³ logo uma solução quadrática passará com tranquilidade.
 
-## Solução
+### Solução
 
-Faremos um loop na string S onde, dado o índice i, a string que corresponde aos caracteres já escritos é o prefixo de S com tamanho i, e a string dos caracteres não escritos é o sufixo de S a partir de i. Portanto, queremos a *maior* substring do prefixo de S que corresponde a um prefixo do sufixo de S
+Faremos um loop na string S onde, dado o índice i, a string que corresponde aos caracteres já escritos é o prefixo de S com tamanho i, e a string dos caracteres não escritos é o sufixo de S a partir de i. Portanto, queremos a *maior* substring do prefixo de S que corresponde a um prefixo do sufixo de S.
 
-Começaremos do segundo caractere, então a quantidade de passos inicial deverá ser 1
+Começaremos do segundo caractere, então a quantidade de passos inicial deverá ser 1.
 
 ```c++
 int passos = 1;
@@ -44,7 +52,8 @@ passos++;
 i += maior-1; // Se copiamos uma string de tamanho n, devemos pular n-1 endereços
 ```
 
-## Solução completa:
+### Solução completa
+
 ```c++
 
 #includes e defines
@@ -80,6 +89,64 @@ int main() {
   }
 
   cout << passos << endl;
+  return 0;
+}
+```
+
+## Password
+
+Questão: https://codeforces.com/group/btcK4I5D5f/contest/247037/problem/H
+
+Complexidade: O(|S|) com 1 <= S <= 10^5
+
+### Solução
+
+TODO: Explicar solução e inverter primeiro for para evitar o sort.
+
+### Solução Completa
+
+```c++
+
+#includes e defines
+...
+
+int Zcalc(string s) {
+  ...
+}
+
+int main() {
+  ios_base::sync_with_stdio(false);
+  cin.tie(NULL);
+
+  string s;
+  cin >> s;
+
+  vi Z = Zcalc(s);
+
+  for(int i = 1; i < (int)Z.size(); i++) {
+    if(Z[i] + i == (int)Z.size()) {
+      s_sizes.pb(Z[i]);
+    }
+  }
+
+  sort(s_sizes.begin(), s_sizes.end());
+  int res = 0;
+  for(int i = 1; i < Z.size(); i++) {
+    if(Z[i] + i == Z.size()) {
+      res = max(res, Z[i]-1);
+    }
+    else {
+      res = max(res, Z[i]);
+    }
+  }
+
+  int idx = upper_bound(s_sizes.begin(), s_sizes.end(), res) - s_sizes.begin()-1;
+
+  if(idx >= 0)
+    cout << s.substr(0, s_sizes[idx]) << endl;
+  else
+    cout << "Just a legend\n";
+
   return 0;
 }
 ```
