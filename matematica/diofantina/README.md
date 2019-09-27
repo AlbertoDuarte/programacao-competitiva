@@ -34,9 +34,12 @@ possivel[0] = 1; // C = 0 é o caso trivial que sempre tem solução X = Y = 0
 
 A DP funciona da seguinte maneira: Suponha que exista solução para AX + BY = C - A,  com X, Y >= 0
 Logo,
+
+```
     AX + A + BY = C - A + A
     A(X+A) + BY = C
     A(X') + BY = C , com X'= X+A >= 0 pois A > 0
+```
 
 Então faremos um loop até min(N, 10⁶) sempre verificando se existe solução para C-A ou C-B para decidirmos a existência de para C.
 
