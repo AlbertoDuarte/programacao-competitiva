@@ -4,3 +4,4 @@ Este repositório é um compilado de soluções de questões de programação co
 
 ## Assuntos
 - [String](string/README.md)
+- [Matemática](matematica/README.md)
