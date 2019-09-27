@@ -6,7 +6,7 @@ Questões solucionadas:
 
 ## Equações
 
-Questão: TODO: adicionar link da questão
+Questão: https://codeforces.com/group/btcK4I5D5f/contest/253645/problem/E
 
 Complexidade: O(min(N, 10⁶))
 
