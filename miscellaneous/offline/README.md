@@ -1,4 +1,4 @@
-# Equação Diofantina Linear
+# Solução Offline
 
 Questões solucionadas:
 
@@ -10,13 +10,13 @@ Questão: https://codeforces.com/group/btcK4I5D5f/contest/253645/problem/J
 
 Complexidade: O(10⁹) offline, O(10³) online
 
-Uma solução simples para esse problema é utilizar a fórmula O(1) para a soma dos n primeiros quadrados. Porém, nem sempre teremos esse tipo de fórmula durante uma competição. Logo, esse método pode ser uma alternativa prática.
+Uma solução simples para esse problema é utilizar a fórmula O(1) para a soma dos n primeiros quadrados. Como nem sempre teremos esse tipo de fórmula durante uma competição esse método pode ser uma alternativa prática.
 
-Faremos a maior parte dos cálculos necessários em Python e guardaremos o resultado em um txt. Então, copiaremos o resultado no txt para um vetor no programa em C.
+Faremos a maior parte dos cálculos necessários em Python e guardaremos o resultado em um txt. Então copiaremos o resultado no txt para um vetor no programa em C e este programa resolverá o problema.
 
 ### Solução
 
-Como queremos calcular a soma dos N primeiros quadrados com 1 <= N <= 10⁹, por que guardaremos apenas *parte* dos cálculos no txt e não tudo? Imagine que calculemos um vetor de tamanho 10⁹ offline. Além do problema de memória ao colocá-lo no vetor em C, se considerarmos uma média de 8 caracteres por número, teremos 8 * 10⁹ caracteres e isso pode ser um problema.
+Como queremos calcular a soma dos N primeiros quadrados com 1 <= N <= 10⁹, por que guardaremos apenas **parte** dos cálculos no txt e não tudo? Imagine que calculemos um vetor de tamanho 10⁹ offline. Além do problema de memória ao colocá-lo no vetor em C, se considerarmos uma média de 8 caracteres por número, teremos 8 * 10⁹ caracteres e isso pode ser um problema até no tamanho do arquivo de input para mandar a algum *judge*.
 
 Portanto, calcularemos de fato a soma dos N primeiros quadrados até 10⁹, mas guardaremos no txt apenas os múltiplos de 10⁶. Assim, o vetor terá apenas 10³ elementos e, caso necessitemos de um número que não é múltiplo de 10⁶, podemos simplesmente calcular o que falta online.
 
