@@ -6,3 +6,5 @@ Este repositório é um compilado de soluções de questões de programação co
 - [String](string/README.md)
 - [Matemática](matematica/README.md)
 - [Estruturas de Dados](estruturas/README.md)
+- [Miscellaneous](miscellaneous/README.md)
+
