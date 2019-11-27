@@ -1,4 +1,5 @@
 # Estruturas de Dados
 
 ## Algoritmos
-- [Union find](unionfind/README.md)
+- [Union Find](unionfind/README.md)
+- [Sparse Table](sparsetable/README.md)
