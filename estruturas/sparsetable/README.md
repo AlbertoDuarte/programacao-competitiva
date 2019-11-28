@@ -2,7 +2,7 @@
 
 Questões solucionadas:
 
-1. [Máximo e Mínimo](#Friends and Subsequences)
+1. [Máximo e Mínimo](#friendsandsubsequences)
 
 Códigos auxiliares:
 
