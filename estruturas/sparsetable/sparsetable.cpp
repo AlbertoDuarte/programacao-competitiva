@@ -5,7 +5,7 @@ for (int i = 2; i <= MAXN; i++)
     logv[i] = logv[i/2] + 1;
 
 
-// sparse table
+// sparse table de maximo
 int st[MAXN][K];
 
 void precompute(int N) {
@@ -20,5 +20,7 @@ void precompute(int N) {
 
 int query(int L, int R) {
     int j = logv[R - L + 1];
-    int minimum = min(st[L][j], st[R - (1 << j) + 1][j]);
+    int maximum = max(st[L][j], st[R - (1 << j) + 1][j]);
+    
+    return maximum;
 }
