@@ -15,13 +15,13 @@
 #define teto(a, b) ((a+b-1)/(b))
 using namespace std;
 
+// Extra
+#define forn(i, n) for(int i = 0; i < (int)n; i++)
+#define forne(i, a, b) for(int i = a; i <= b; i++)
+//
+
 const int MAX = 400010;
 const int MOD = 1000000007;
 const int INF = 0x3f3f3f3f;
 const ll LLINF = 0x3f3f3f3f3f3f3f3f;
 const ld EPS = 1e-7;
-
-// Extra
-#define forn(i, n) for(int i = 0; i < (int)n; i++)
-#define forne(i, a, b) for(int i = a; i <= b; i++)
-//
